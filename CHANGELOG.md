@@ -11,4 +11,4 @@ This project does (not yet) adhere to [Semantic Versioning](https://semver.org/s
 
 ## [1.0.0] - 2021-06-16
 ### Added
-- Initial commit
+- Initial release
