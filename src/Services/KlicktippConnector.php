@@ -798,7 +798,7 @@ class KlicktippConnector {
      */
     protected function _http_request($path, $method = 'GET', $data = NULL, $usesession = TRUE, $default_header = array()) {
 
-        $result = new stdClass();
+        $result = new \stdClass();
 
         // Make sure the socket opened properly.
         $fp = @fsockopen($this->port == 443 ? 'ssl://' . $this->host : $this->host, $this->port, $errno, $errstr, 20);
@@ -812,7 +812,7 @@ class KlicktippConnector {
 
         // Build HTTP request.
         $default_header['Host'] = 'Host' . ': ' . $this->host;
-        $default_header['Referer'] = 'Referer' . ': //' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
+        $default_header['Referer'] = 'Referer' . ': //' . ($_SERVER['SERVER_NAME'] ?? '') . $_SERVER['PHP_SELF'];
         $default_header['Content-Type'] = 'Content-Type' . ': ' . 'application/x-www-form-urlencoded';
 
         // Set session cookie if applicable
