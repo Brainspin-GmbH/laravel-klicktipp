@@ -1,45 +1,20 @@
-# subscribe response data
+# A laravel wrapper for the Klicktipp API
 
-{
-    "id": "12345678",
-    "listid": "12345",
-    "optin": "15.06.2021 20:36:36",
-    "optin_ip": "0.0.0.0 - By API Request",
-    "email": "sjard.christian@gmail.com",
-    "status": "Subscribed",
-    "bounce": "Not Bounced",
-    "date": "15.06.2021 20:36:36",
-    "ip": "0.0.0.0 - By API Request",
-    "unsubscription": "",
-    "unsubscription_ip": "0.0.0.0",
-    "referrer": "",
-    "sms_phone": null,
-    "sms_status": null,
-    "sms_bounce": null,
-    "sms_date": "",
-    "sms_unsubscription": "",
-    "sms_referrer": null,
-    "fieldFirstName": "",
-    "fieldLastName": "",
-    "fieldCompanyName": "",
-    "fieldStreet1": "",
-    "fieldStreet2": "",
-    "fieldCity": "",
-    "fieldState": "",
-    "fieldZip": "",
-    "fieldCountry": "",
-    "fieldPrivatePhone": "",
-    "fieldMobilePhone": "",
-    "fieldPhone": "",
-    "fieldFax": "",
-    "fieldWebsite": "",
-    "fieldBirthday": "",
-    "fieldLeadValue": "",
-    "field41890": "",
-    "field41891": "",
-    "field41892": "",
-    "field41893": "",
-    "field45100": "",
-    "field48330": "",
-    "field48331": "",
-}
+This package is a laravel wrapper for the [Klicktipp API](https://support.klicktipp.com/article/389-application-programming-interface-api).
+
+```php
+$response = Klicktipp::subscribe($email);
+```
+
+## Configuration
+
+You need to provide these credentials in your .env:
+```php
+KLICKTIPP_USERNAME=
+KLICKTIPP_DEVELOPER_KEY=
+KLICKTIPP_CUSTOMER_KEY=
+```
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
